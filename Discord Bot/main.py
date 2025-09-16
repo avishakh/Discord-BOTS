@@ -39,13 +39,6 @@ async def on_message(message):
         await message.delete()
         await message.channel.send(f"{message.author.mention}, Chup thako beyadop!")
     await bot.process_commands(message)
-
-
-     if "nigga" in message.content.lower():
-        await message.delete()
-        await message.channel.send(f"{message.author.mention}, Chup thako beyadop!")
-    await bot.process_commands(message)
-    
     
     
 @bot.command()
@@ -109,3 +102,4 @@ bot.run(token, log_handler=handler, log_level=logging.DEBUG)
 
 
  
+
