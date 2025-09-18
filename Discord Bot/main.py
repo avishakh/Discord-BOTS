@@ -35,12 +35,14 @@ async def on_member_join(member):
 async def on_message(message):
     if message.author == bot.user:
         return
-    if "fuck" in message.content.lower():
+    if message.content.lower() in ["chudi", "sama","fuck", "dhon", "bhenchod", "madarchod", "randi", "lund", "gandu"]:
         await message.delete()
         await message.channel.send(f"{message.author.mention}, Chup thako beyadop!")
     await bot.process_commands(message)
     
+
     
+ 
 @bot.command()
 async def hello(ctx):
     await ctx.send(f"Hello, {ctx.author.mention}!")  
@@ -100,6 +102,6 @@ async def secret_error(ctx, error):
 bot.run(token, log_handler=handler, log_level=logging.DEBUG)  
 
 
-
  
+
 
